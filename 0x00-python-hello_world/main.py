@@ -1,2 +1,2 @@
-#! /bin/python3
-print("HH")
+#!/usr/bin/python3
+print("Best School")
