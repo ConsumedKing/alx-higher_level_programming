@@ -2,9 +2,9 @@
 
 def new_in_list(my_list, idx, element):
     if idx < 0:
-        return None
+        return my_list
     if idx > len(my_list) - 1:
-        return None
+        return my_list
     new_made = my_list.copy()
     new_made[idx] = element
     return new_made
