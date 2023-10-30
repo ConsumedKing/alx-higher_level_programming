@@ -4,7 +4,7 @@ Class Rectangle Real Definition
 """
 
 
-class Rectangle():
+class Rectangle:
     """ Rectangle Class """
     def __init__(self, width=0, height=0):
         self.width = width
@@ -33,3 +33,4 @@ class Rectangle():
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         self.__height = value
+
