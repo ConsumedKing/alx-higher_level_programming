@@ -3,6 +3,6 @@
 This file is an empty class 
 """
 
-class Rectangle():
+class Rectangle:
     """ Empty Class Rectangle """
     pass
