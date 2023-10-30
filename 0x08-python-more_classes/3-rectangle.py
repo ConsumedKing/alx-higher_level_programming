@@ -51,5 +51,5 @@ class Rectangle():
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 str_return = str_return + '#'
-            str_return = str_return + '\n'
+            str_return = str_return + ('\n' if i != self.__height - 1 else '')
         return str_return
