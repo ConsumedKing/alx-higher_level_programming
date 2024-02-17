@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This is Script
-two in mysql project
+This is Script two in mysql project
 """
 import MySQLdb
 import sys
@@ -12,10 +11,9 @@ if __name__ == "__main__":
                                  password=sys.argv[2],
                                  database=sys.argv[3],
                                  port=3306)
-
     cursor = connection.cursor()
     query = "SELECT * FROM states WHERE name LIKE BINARY \
-        'N%' ORDER BY states.id ASC"
+        'N%' ORDER BY states.id"
     cursor.execute(query)
     results = cursor.fetchall()
     for row in results:
