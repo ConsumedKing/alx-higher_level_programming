@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cursor = connection.cursor()
     cursor.execute("SELECT cities.name \
                    FROM states, cities WHERE states.id = cities.state_id \
-                   AND BINARY states.name = %s ORDER BY cities.id",
+                   AND states.name LIKE BINARY %s ORDER BY cities.id",
                    (sys.argv[4], ))
     results = cursor.fetchall()
     for i in range(len(results)):
