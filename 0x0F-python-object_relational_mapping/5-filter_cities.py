@@ -18,8 +18,6 @@ if __name__ == "__main__":
                    (sys.argv[4], ))
     results = cursor.fetchall()
     if results is not None:
-        for i in range(len(results)):
-            print(results[i][0] + ', ', end="") if i < len(results) - 1 else \
-                print(results[i][0])
+        print(", ".join([row[0] for row in results]))
     cursor.close()
     connection.close()
