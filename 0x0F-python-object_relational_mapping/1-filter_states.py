@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This is Script
-one in mysql project
+two in mysql project
 """
 
 import sys
