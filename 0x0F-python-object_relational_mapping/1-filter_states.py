@@ -3,14 +3,8 @@
 This is Script
 two in mysql project
 """
-
-import sys
 import MySQLdb
-
-"""
-Access to the database and get the states
-from the database.
-"""
+import sys
 
 if __name__ == "__main__":
     connection = MySQLdb.connect(host="localhost",
@@ -20,13 +14,11 @@ if __name__ == "__main__":
                                  port=3306)
 
     cursor = connection.cursor()
-    query = "SELECT id, name FROM states where name LIKE BINARY \
-        'N%' ORDER BY id ASC"
+    query = "SELECT id, name FROM states where name LIKE 'N%' ORDER BY id ASC"
 
     cursor.execute(query)
     results = cursor.fetchall()
     for row in results:
         print(row)
-
     cursor.close()
     connection.close()
