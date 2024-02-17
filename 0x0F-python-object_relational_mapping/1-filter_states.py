@@ -7,6 +7,10 @@ one in mysql project
 import sys
 import MySQLdb
 
+"""
+Access to the database and get the states
+from the database.
+"""
 
 if __name__ == "__main__":
     connection = MySQLdb.connect(host="localhost",
