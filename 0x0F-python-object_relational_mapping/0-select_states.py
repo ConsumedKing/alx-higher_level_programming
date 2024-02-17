@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This is Script one in mysql project """
 import sys
 import MySQLdb
 
