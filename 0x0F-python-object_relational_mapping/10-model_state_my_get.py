@@ -15,9 +15,8 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).filter(
-        State.name.like(sys.argv[4])).order_by(State.id)
-    if not states:
-        print("Not Found")
+        State.name.like(sys.argv[4])).order_by(State.id).first()
+    if states is None:
+        print("Not found")
     else:
-        for state in states:
-            print(f'{state.id}')
+        print(f'{states.id}')
